@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+
+	<!-- Español -->
+
+###settings.xml###
+	<string id="40001">General</string>
+	<string id="40002">Los Controles Parentales</string>
+	<string id="40003">Misceláneo</string>
+	<string id="40004">Depuración</string>
+###End settings.xml###
+
+###Menu.py###
+	# Menu nombres de los elementos
+	<string id="40005">Películas y Programas de televisión instantáneas</string>
+	<string id="40006">Disco por Correo</string>
+	
+	<string id="40007">Fila instantánea: Todos</string>
+	<string id="40008">Fila instantánea: Películas</string>
+	<string id="40009">Fila instantánea: TV</string>
+	<string id="40010">Recomendado</string>
+	<string id="40011">Todas las Novedades</string>
+	<string id="40012">Todas las Novedades: Películas</string>
+	<string id="40013">Todas las Novedades: TV</string>
+	<string id="40014">Buscar ...</string>
+	<string id="40015">Búsqueda Experimental ...</string>
+	<string id="40016">Los 25 principales Novedades</string>
+	<string id="40017">Los 25 principales Novedades: Películas</string>
+	<string id="40018">Los 25 principales Novedades: TV</string>
+	<string id="40019">Por Género</string>
+	##Los 25 principales Por Género
+	<string id="40020">Los 10 principales Por Género</string>
+	<string id="40021">Top 25's By Genre</string>
+	<string id="40022">Acción y Aventuras</string>
+	<string id="40023">Animes</string>
+	<string id="40024">Blu-ray</string>
+	<string id="40025">Infantiles y Familiares</string>
+	<string id="40026">Clásicas</string>
+	<string id="40027">Comedias</string>
+	<string id="40028">Documentales</string>
+	<string id="40029">Dramas</string>
+	<string id="40030">Fe y Espiritualidad</string>
+	<string id="40031">Extranjeras</string>
+	<string id="40032">Gays y Lesbianas</string>
+	<string id="40033">Terror</string>
+	<string id="40034">Independientes</string>
+	<string id="40035">Music & Musicals</string>
+	<string id="40036">Romance</string>
+	<string id="40037">Ciencia ficción y Fantasía</string>
+	<string id="40038">De Interés Especial</string>
+	<string id="40039">Películas sobre Deportes</string>
+	<string id="40040">Programas de TV y Series</string>
+	<string id="40041">Thrillers</string>
+	##DVD Queue
+	<string id="40042">Fila de Disco: Todos</string>
+	<string id="40043">Fila de Disco: Películas</string>
+	<string id="40044">Fila de Disco: TV</string>
+	
+	<string id="40045">Buscar ...</string>
+	<string id="40046">En el hogar</string>
+	## Historia de Alquiler
+	<string id="40047">Historial de Alquiler</string>
+	<string id="40048">Enviado</string>
+	<string id="40049">Devuelto</string>
+	<string id="40050">Vistos</string>
+	# Navegar Género
+	<string id="40051">Buscar por Género</string>
+###End Menu.py###
+
+###iQueue.py###
+	<string id="40052">Configuración completa.</string>
+	<string id="40053">Debe reiniciar el plugin de xbmcflicks.</string>
+	
+	<string id="40054">Después de haber vinculado xbmcflick en Netflix.</string>
+	<string id="40055">Haga clic en Aceptar una vez que termine el enlace en la ventana del navegador.</string>
+	
+	<string id="40052">Configuración completa.</string>
+	<string id="40056">Debe reiniciar XBMC.</string>
+	
+#Add to disc Queue
+    <string id="40057">Netflix: Añadir a la fila de Disco</string>	###162###
+    <string id="40058">Netflix: Quitar de la fila de Disco</string>
+    <string id="40059">Netflix: Agregar al comienzo de la fila de Disco</string>
+    
+    <string id="40060">Netflix: Añadir Temporada a la fila de Disco</string>
+    <string id="40061">Netflix: Retire Temporada de la fila de Disco</string>
+    <string id="40062">Netflix: Agregar al comienzo de la fila de Disco</string>
+
+    
+    <string id="40063">Netflix: Añadir a la fila instantánea</string>
+    <string id="40064">Netflix: Quitar de la fila instantánea</string>
+    <string id="40065">Netflix: Buscar similares</string>
+    
+    <string id="40067">Netflix: Agregar temporada completa a la fila instantánea</string>
+    <string id="40068">Netflix: Quite toda la temporada de la fila instantánea</string>	###176###
+##########
+	<string id="40069">Netflix: Añadir a la fila instantánea</string>	###200###
+	<string id="40070">Netflix: Quitar de la fila instantánea</string>
+	<string id="40065">Netflix: Buscar similares</string>
+	
+	<string id="40071">Netflix: Agregar temporada completa a fila instantánea</string>
+	<string id="40072">Netflix: Quite toda la temporada de la fila instantánea</string>	###205###
+##########
+	<string id="40073">Netflix: Añadir a la fila de Disco</string>	###239###
+	<string id="40074">Netflix: Quitar de la fila de Disco</string>
+	<string id="40075">Netflix: Agregar al comienzo de la fila de Disco</string>
+	
+	<string id="40076">Netflix: Añadir Temporada a la fila de Disco</string>
+	<string id="40077">Netflix: Retire Temporada de la fila de Disco</string>
+	<string id="40078">Netflix: Agregar al comienzo de la fila de Disco</string>	###245###
+###End iQueue.py###
+
+###modQueue.py###
+	
+	<string id="40052">Configuración completa.</string>	###40###
+	<string id="40053">Debe reiniciar el plugin de xbmcflicks.</string>	###40###
+		
+	<string id="40054">Después de haber vinculado xbmcflick en Netflix.</string>	###59###
+	<string id="40055">Haga clic en Aceptar una vez que termine el enlace en la ventana del navegador.</string>	###59###
+		
+	<string id="40052">Configuración completa.</string>	###71###
+	<string id="40053">Debe reiniciar el plugin de xbmcflicks.</string>	###71###
+	
+###End modQueue.py###
+
+    <!-- ajustes de etiquetas -->
+	#<string id="29999">Idioma</string>
+    <string id="30000">Cartel de calidad</string>
+    <string id="30001">Alta Definición</string>
+    <string id="30002">Grande</string>
+    <string id="30003">Mediano</string>
+    <string id="30004">Pequeño</string>
+    <!-- número máximo de elementos de fila al instante para recuperar -->
+    <string id="30005">Fila Instantánea: Artículos Máximo para recuperar</string>
+    <string id="30006">10</string>
+    <string id="30007">25</string>
+    <string id="30008">50</string>
+    <string id="30009">75</string>
+    <string id="30010">100</string>
+    <string id="30011">200</string>
+    <string id="30012">300</string>
+    <string id="30013">400</string>
+    <string id="30014">500</string>
+    <!-- anexar resumen a nombre del título en la pantalla -->
+    <string id="30015">Obtener el Trama de Netflix</string>
+    <string id="30019">Extrae nombres de actores del Resumen</string>
+    <string id="30016">Sí</string>
+    <string id="30017">No</string>
+    <string id="30018">Incluya el año en el título</string>
+    <string id="30020">Obtener información del Reparto desde Netflix</string>
+    <string id="30029">Utilice la ubicación del Reproductor suplente</string>
+    <string id="30030">Expandir Episodios de TV automáticamente</string>
+    <string id="30031">OSX</string>
+    <string id="30032">¿Está usted en Canadá?</string>
+    <string id="30090">Opciones de depuración</string>
+    <string id="30091">Habilitar el registro de depuración</string>
+    <string id="30093">Habilitar Información detallado del usuario</string>
+    <string id="30094">Advertencia: La información de usuario detallado imprimira su</string>
+    <string id="30095">Identificacíon y Ficha de usuario en el archivo de registro</string>
+    <string id="30099">Nota: Las opciones de abajo aumentará el tiempo de carga</string>
+    <!--- Opciones de control parental -->
+    <string id="30150">Mostrar Género: Acción y aventuras</string>
+    <string id="30151">Mostrar Género: Anime y Animación</string>
+    <string id="30152">Mostrar Género: Blu-ray</string>
+    <string id="30153">Mostrar Género: Infantiles y familiares</string>
+    <string id="30154">Mostrar Género: Clásicas</string>
+    <string id="30155">Mostrar Género: Comedias</string>
+    <string id="30156">Mostrar Género: Documentales</string>
+    <string id="30157">Mostrar Género: Dramas</string>
+    <string id="30158">Mostrar Género: Fe y Espiritualidad</string>
+    <string id="30159">Mostrar Género: Extranjeras</string>
+    <string id="30160">Mostrar Género: Gays y Lesbianas</string>
+    <string id="30161">Mostrar Género: Terror</string>
+    <string id="30162">Mostrar Género: Independientes</string>
+    <string id="30163">Mostrar Género: Música y Musicales</string>
+    <string id="30164">Mostrar Género: Romance</string>
+    <string id="30165">Mostrar Género: Ciencia ficción y Fantasía</string>
+    <string id="30166">Mostrar Género: De Interés Especial</string>
+    <string id="30167">Mostrar Género: Películas sobre deportes</string>
+    <string id="30168">Mostrar Género: Programas de TV y Series</string>
+    <string id="30169">Mostrar Género: Thrillers</string>
+    <string id="30170">empty</string>
+    <string id="30171">empty</string>
+
+    <string id="30200">Límite de Clasificación a</string>
+    <string id="30201">Sin Límite</string>
+    <string id="30202">Sin valorar - Maduro(a)</string>
+    <string id="30203">No se ha clasificado - Maduro(a)</string>
+    <string id="30204">TV-MA</string>
+    <string id="30205">R</string>
+    <string id="30206">TV-14</string>
+    <string id="30207">PG</string>
+    <string id="30208">No se ha clasificado - Niños</string>
+    <string id="30209">PG</string>
+    <string id="30210">TV-G</string>
+    <string id="30211">G</string>
+    <string id="30212">TV-Y7</string>
+    <string id="30213">TV-Y</string>
+    <string id="30214"></string>
+    <string id="30215"></string>
+    <string id="30216"></string>
+    <string id="30217"></string>
+    <string id="30218"></string>
+    <string id="30219"></string>
+    <string id="30220">Mostrar clasificación en el Título</string>
+    <string id="30221">No mostrar los artículos antes del Año</string>
+    <string id="30222"></string>
+	
+	<!-- Languages  -->
+  
+    <string id="50010">Dansk</string>
+    <string id="50012">English</string>
+    <string id="50015">Français</string>
+    <string id="50014">Suomi</string>
+    <string id="50030">Norsk</string>
+    <string id="50033">Português</string>
+    <string id="50040">Español</string>
+    <string id="50042">Svenska</string>
+	
+</strings>

@@ -1,4 +1,4 @@
-<playercorefactory>
+﻿<playercorefactory>
   <players>
     <player name="IE" type="ExternalPlayer">
      <filename>/usr/bin/open</filename>

@@ -1,4 +1,4 @@
-class XInfo:
+﻿class XInfo:
     def __init__(self):
         self.Mpaa = "n/a"
         self.Position = "0"

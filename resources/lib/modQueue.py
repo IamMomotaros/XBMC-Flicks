@@ -1,4 +1,4 @@
-from Netflix import *
+﻿from Netflix import *
 import getopt
 import time 
 import re
@@ -6,6 +6,16 @@ import xbmcplugin, xbmcaddon, xbmcgui, xbmc
 import urllib
 import webbrowser
 from xinfo import *
+
+__settings__ = xbmcaddon.Addon(id='plugin.video.xbmcflicks')
+ROOT_FOLDER = __settings__.getAddonInfo('path')
+RESOURCE_FOLDER = os.path.join(str(ROOT_FOLDER), 'resources')
+LIB_FOLDER = os.path.join(str(RESOURCE_FOLDER), 'lib')
+WORKING_FOLDER = xbmc.translatePath(__settings__.getAddonInfo("profile"))
+LINKS_FOLDER = os.path.join(str(WORKING_FOLDER), 'links')
+REAL_LINK_PATH = os.path.join(str(WORKING_FOLDER), 'links')
+USERINFO_FOLDER = WORKING_FOLDER
+XBMCPROFILE = xbmc.translatePath('special://profile')
 
 MY_USER = {
         'request': {
@@ -37,7 +47,7 @@ def getAuth(netflix, verbose):
         MY_USER['access']['secret'] = tok.secret
         saveUserInfo()
         dialog = xbmcgui.Dialog()
-        dialog.ok("Settings completed", "You must restart the xbmcflicks plugin")
+        dialog.ok( __settings__.getLocalizedString( 40052 ), __settings__.getLocalizedString( 40053 ))
         print "Settings completed", "You must restart the xbmcflicks plugin"
         sys.exit(1)
 
@@ -56,7 +66,7 @@ def getAuth(netflix, verbose):
             
         #display click ok when finished adding xbmcflicks as authorized app for your netflix account
         dialog = xbmcgui.Dialog()
-        ok = dialog.ok("After you have linked xbmcflick in netflix.", "Click OK after you finished the link in your browser window.")
+        ok = dialog.ok( __settings__.getLocalizedString( 40054 ), __settings__.getLocalizedString( 40055 ))
         MY_USER['request']['key'] = tok.key
         MY_USER['request']['secret'] = tok.secret
         #now run the second part, getting the access token
@@ -68,7 +78,7 @@ def getAuth(netflix, verbose):
         #now save out the settings
         saveUserInfo()
         #exit script, user must restart
-        dialog.ok("Settings completed", "You must restart the xbmcflicks plugin")
+        dialog.ok( __settings__.getLocalizedString( 40052 ), __settings__.getLocalizedString( 40053 ))
         print "Settings completed", "You must restart the xbmcflicks plugin"
         exit
         sys.exit(1)
@@ -110,15 +120,6 @@ def initApp():
     OSX = False
 
     #get addon info
-    __settings__ = xbmcaddon.Addon(id='plugin.video.xbmcflicks')
-    ROOT_FOLDER = __settings__.getAddonInfo('path')
-    RESOURCE_FOLDER = os.path.join(str(ROOT_FOLDER), 'resources')
-    LIB_FOLDER = os.path.join(str(RESOURCE_FOLDER), 'lib')
-    WORKING_FOLDER = xbmc.translatePath(__settings__.getAddonInfo("profile"))
-    LINKS_FOLDER = os.path.join(str(WORKING_FOLDER), 'links')
-    REAL_LINK_PATH = os.path.join(str(WORKING_FOLDER), 'links')
-    USERINFO_FOLDER = WORKING_FOLDER
-    XBMCPROFILE = xbmc.translatePath('special://profile')
     
     reobj = re.compile(r"200(.{10}).*?644(.*?)4x2(.).*?5118")
     match = reobj.search(API_SECRET)

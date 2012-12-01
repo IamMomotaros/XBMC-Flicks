@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.xbmcflicks"
-       name="XBMC Flicks - Netflix for XBMC"
+       name="XBMC Flicks"
        version="1.0.23"
        provider-name="TeamUMX">
     <requires>
@@ -12,8 +12,18 @@
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <platform>windx wingl osx</platform>
-        <summary lang="en">XBMC Flicks</summary>
+        <summary lang="en">XBMC Flicks - Netflix for XBMC</summary>
+		<summary lang="es">XBMC Flicks - Netflix para XBMC</summary>
+		<summary lang="fr">XBMC Flicks - Netflix pour XBMC</summary>
+		<summary lang="pt">XBMC Flicks - Netflix para XBMC</summary>
         <description lang="en">Netflix for XBMC.. NOTE: This plugin will create the playercorefactory.xml and advanced settings.xml, if you already have an external player configured, you will need to modify it to add in IE as a player. Examples of those files are in the resources folder.</description>
+		<description lang="es">Netflix para XBMC .. NOTA: Este plugin creará el playercorefactory.xml y advanced settings.xml, si usted ya tiene un reproductor externo configurado, tendrá que modificar para añadir en IE como jugador. Ejemplos de estos archivos se encuentran en la carpeta de recursos.</description>
+		<description lang="fr">Netflix pour XBMC .. NOTE: Ce plugin permet de créer le playercorefactory.xml et advanced settings.xml, si vous avez déjà configuré un lecteur externe, vous devrez le modifier pour ajouter dans IE en tant que joueur. Des exemples de ces fichiers se trouvent dans le dossier des ressources.</description>
+		<description lang="pt">Netflix para XBMC .. NOTA: Este plugin irá criar o playercorefactory.xml e advancedsettings.xml, se você já tem um leitor externo configurado, você terá de modificá-lo para adicionar no IE como jogador. Exemplos desses arquivos estão na pasta de recursos.</description>
+		<disclaimer lang="en">Made for The USA, and modified for Canada, may not work properly in other Countries.</disclaimer>
+		<disclaimer lang="es">Hecho para los EE.UU., y modificado por Canadá, puede no funcionar correctamente en otros países.</disclaimer>
+		<disclaimer lang="fr">Conçu pour Les Etats-Unis, et modifié pour le Canada, peuvent ne pas fonctionner correctement dans d'autres pays.</disclaimer>
+		<disclaimer lang="pt">Feito para os EUA, e modificada para o Canadá, pode não funcionar corretamente em outros países.</disclaimer>
+        <platform>windx wingl osx</platform>
     </extension>
 </addon>

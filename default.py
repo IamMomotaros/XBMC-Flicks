@@ -1,4 +1,4 @@
-"""
+﻿"""
     Plugin for streaming your Netflix Instant Queue
 """
 

@@ -1,4 +1,4 @@
-#
+﻿#
 # Library for accessing the REST API from Netflix
 # Represents each resource in an object-oriented way
 #

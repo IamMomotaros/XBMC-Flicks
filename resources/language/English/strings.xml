@@ -1,6 +1,130 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
+
+	<!-- English -->
+
+###settings.xml###
+	<string id="40001">General</string>
+	<string id="40002">Parental Control's</string>
+	<string id="40003">Miscellaneous</string>
+	<string id="40004">Debugging</string>
+###End settings.xml###
+
+###Menu.py###
+	# menu item names
+	<string id="40005">Instant Movies and Shows</string>
+	<string id="40006">Disc by Mail</string>
+	
+	<string id="40007">Instant Queue: All</string>
+	<string id="40008">Instant Queue: Movies</string>
+	<string id="40009">Instant Queue: TV</string>
+	<string id="40010">Recommended</string>
+	<string id="40011">All New Arrivals</string>
+	<string id="40012">All New Arrivals: Movies</string>
+	<string id="40013">All New Arrivals: TV</string>
+	<string id="40014">Search...</string>
+	<string id="40015">Experimental Search...</string>
+	<string id="40016">Top 25 New Arrivals</string>
+	<string id="40017">Top 25 New Arrivals: Movies</string>
+	<string id="40018">Top 25 New Arrivals: TV</string>
+	<string id="40019">By Genre</string>
+	##Top 25 by Genre
+	<string id="40020">Top 10 By Genre</string>
+	<string id="40021">Top 25's By Genre</string>
+	<string id="40022">Action & Adventure</string>
+	<string id="40023">Anime & Animation</string>
+	<string id="40024">Blu-ray</string>
+	<string id="40025">Children & Family</string>
+	<string id="40026">Classics</string>
+	<string id="40027">Comedy</string>
+	<string id="40028">Documentary</string>
+	<string id="40029">Drama</string>
+	<string id="40030">Faith & Spirituality</string>
+	<string id="40031">Foreign</string>
+	<string id="40032">Gay & Lesbian</string>
+	<string id="40033">Horror</string>
+	<string id="40034">Independent</string>
+	<string id="40035">Music & Musicals</string>
+	<string id="40036">Romance</string>
+	<string id="40037">Sci-Fi & Fantasy</string>
+	<string id="40038">Special Interest</string>
+	<string id="40039">Sports & Fitness</string>
+	<string id="40040">Television</string>
+	<string id="40041">Thrillers</string>
+	##DVD Queue
+	<string id="40042">Disc Queue: All</string>
+	<string id="40043">Disc Queue: Movies</string>
+	<string id="40044">Disc Queue: TV</string>
+	
+	<string id="40045">Search...</string>
+	<string id="40046">At Home</string>
+	## Rental History
+	<string id="40047">Rental History</string>
+	<string id="40048">Shipped</string>
+	<string id="40049">Returned</string>
+	<string id="40050">Watched</string>
+	## Genre Browse
+	<string id="40051">Browse by Genre</string>
+###End Menu.py###
+
+###iQueue.py###
+	<string id="40052">Settings completed.</string>
+	<string id="40053">You must restart the xbmcflicks plugin.</string>
+	
+	<string id="40054">After you have linked xbmcflick in netflix.</string>
+	<string id="40055">Click OK after you finished the link in your browser window.</string>
+	
+	<string id="40052">Settings completed.</string>
+	<string id="40056">You must restart XBMC.</string>
+	
+#Add to disc Queue
+    <string id="40057">Netflix: Add to Disc Queue</string>	###162###
+    <string id="40058">Netflix: Remove From Disc Queue</string>
+    <string id="40059">Netflix: Add to Top of Disc Queue</string>
+    
+    <string id="40060">Netflix: Add Season to Disc Queue</string>
+    <string id="40061">Netflix: Remove Season From Disc Queue</string>
+    <string id="40062">Netflix: Add to Top of Disc Queue</string>
+
+    
+    <string id="40063">Netflix: Add to Instant Queue</string>
+    <string id="40064">Netflix: Remove From Instant Queue</string>
+    <string id="40065">Netflix: Find Similar</string>
+    
+    <string id="40067">Netflix: Add Entire Season to Instant Queue</string>
+    <string id="40068">Netflix: Remove Entire Season From Instant Queue</string>	###176###
+##########
+	<string id="40069">Netflix: Add to Instant Queue</string>	###200###
+	<string id="40070">Netflix: Remove From Instant Queue</string>
+	<string id="40065">Netflix: Find Similar</string>
+	
+	<string id="40071">Netflix: Add Entire Season to Instant Queue</string>
+	<string id="40072">Netflix: Remove Entire Season From Instant Queue</string>	###205###
+##########
+	<string id="40073">Netflix: Add to Disc Queue</string>	###239###
+	<string id="40074">Netflix: Remove From Disc Queue</string>
+	<string id="40075">Netflix: Add to Top of Disc Queue</string>
+	
+	<string id="40076">Netflix: Add Season to Disc Queue</string>
+	<string id="40077">Netflix: Remove Season From Disc Queue</string>
+	<string id="40078">Netflix: Add to Top of Disc Queue</string>	###245###
+###End iQueue.py###
+
+###modQueue.py###
+	
+	<string id="40052">Settings completed.</string>	###40###
+	<string id="40053">You must restart the xbmcflicks plugin.</string>	###40###
+		
+	<string id="40054">After you have linked xbmcflick in netflix.</string>	###59###
+	<string id="40055">Click OK after you finished the link in your browser window.</string>	###59###
+		
+	<string id="40052">Settings completed.</string>	###71###
+	<string id="40053">You must restart the xbmcflicks plugin.</string>	###71###
+	
+###End modQueue.py###
+	
     <!-- settings labels -->
+	#<string id="29999">Language</string>
     <string id="30000">Poster quality</string>
     <string id="30001">HD</string>
     <string id="30002">High</string>
@@ -81,4 +205,16 @@
     <string id="30220">Show Rating in Title</string>
     <string id="30221">Don't show items before the Year</string>
     <string id="30222"></string>
+	
+	<!-- Languages  -->
+  
+    <string id="50010">Dansk</string>
+    <string id="50012">English</string>
+    <string id="50015">Français</string>
+    <string id="50014">Suomi</string>
+    <string id="50030">Norsk</string>
+    <string id="50033">Português</string>
+    <string id="50040">Español</string>
+    <string id="50042">Svenska</string>
+	
 </strings>

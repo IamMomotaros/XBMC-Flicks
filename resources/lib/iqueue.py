@@ -1,4 +1,4 @@
-from Netflix import *
+﻿from Netflix import *
 import getopt
 import time 
 import re
@@ -9,6 +9,16 @@ import os
 from settings import *
 from xinfo import *
 import simplejson
+
+__settings__ = xbmcaddon.Addon(id='plugin.video.xbmcflicks')
+ROOT_FOLDER = __settings__.getAddonInfo('path')
+RESOURCE_FOLDER = os.path.join(str(ROOT_FOLDER), 'resources')
+LIB_FOLDER = os.path.join(str(RESOURCE_FOLDER), 'lib')
+WORKING_FOLDER = xbmc.translatePath(__settings__.getAddonInfo("profile"))
+LINKS_FOLDER = os.path.join(str(WORKING_FOLDER), 'links')
+REAL_LINK_PATH = os.path.join(str(WORKING_FOLDER), 'links')
+USERINFO_FOLDER = WORKING_FOLDER
+XBMCPROFILE = xbmc.translatePath('special://profile')
 
 # parameter keys
 PARAMETER_KEY_MODE = "mode"
@@ -53,7 +63,7 @@ def getAuth(netflix, verbose):
         MY_USER['access']['secret'] = tok.secret
         saveUserInfo()
         dialog = xbmcgui.Dialog()
-        dialog.ok("Settings completed", "You must restart the xbmcflicks plugin")
+        dialog.ok(__settings__.getLocalizedString( 40052 ), __settings__.getLocalizedString( 40053 ))
         print "Settings completed", "You must restart the xbmcflicks plugin"
         sys.exit(1)
 
@@ -73,7 +83,7 @@ def getAuth(netflix, verbose):
             
         #display click ok when finished adding xbmcflicks as authorized app for your netflix account
         dialog = xbmcgui.Dialog()
-        ok = dialog.ok("After you have linked xbmcflick in netflix.", "Click OK after you finished the link in your browser window.")
+        ok = dialog.ok(__settings__.getLocalizedString( 40054 ), __settings__.getLocalizedString( 40055 ))
         print "The dialog was displayed, hopefully you read the text and waited until you authorized it before clicking ok."
         MY_USER['request']['key'] = tok.key
         if(VERBOSE_USER_LOG):
@@ -90,7 +100,7 @@ def getAuth(netflix, verbose):
         #now save out the settings
         saveUserInfo()
         #exit script, user must restart
-        dialog.ok("Settings completed", "You must restart XBMC")
+        dialog.ok( __settings__.getLocalizedString( 40052 ), __settings__.getLocalizedString( 40056 ))
         print "Settings completed", "You must restart XBMC"
         exit
         sys.exit(1)
@@ -159,21 +169,21 @@ def addDirectoryItem(curX, isFolder=True, parameters={}, thumbnail=None):
 
     if(not curX.nomenu):
         if(not curX.TvEpisode):
-            commands.append(( 'Netflix: Add to Disc Queue', runnerAddD, ))
-            commands.append(( 'Netflix: Remove From Disc Queue', runnerRemoveD, ))
-            commands.append(( 'Netflix: Add to Top of Disc Queue', runnerAddTopD, ))
+            commands.append(( __settings__.getLocalizedString( 40057 ), runnerAddD, ))
+            commands.append(( __settings__.getLocalizedString( 40058 ), runnerRemoveD, ))
+            commands.append(( __settings__.getLocalizedString( 40059 ), runnerAddTopD, ))
         else:
-            commands.append(( 'Netflix: Add Season to Disc Queue', runnerAddD, ))
-            commands.append(( 'Netflix: Remove Season From Disc Queue', runnerRemoveD, ))
-            commands.append(( 'Netflix: Add to Top of Disc Queue', runnerAddTopD, ))
+            commands.append(( __settings__.getLocalizedString( 40060 ), runnerAddD, ))
+            commands.append(( __settings__.getLocalizedString( 40061 ), runnerRemoveD, ))
+            commands.append(( __settings__.getLocalizedString( 40062 ), runnerAddTopD, ))
 
         if(not curX.TvEpisode):
-            commands.append(( 'Netflix: Add to Instant Queue', runnerAdd, ))
-            commands.append(( 'Netflix: Remove From Instant Queue', runnerRemove, ))
-            #commands.append(( 'Netflix: Find Similar', runnerSearch, ))
+            commands.append(( __settings__.getLocalizedString( 40063 ), runnerAdd, ))
+            commands.append(( __settings__.getLocalizedString( 40064 ), runnerRemove, ))
+            #commands.append(( __settings__.getLocalizedString( 40065 ), runnerSearch, ))
         else:
-            commands.append(( 'Netflix: Add Entire Season to Instant Queue', runnerAdd, ))
-            commands.append(( 'Netflix: Remove Entire Season From Instant Queue', runnerRemove, ))
+            commands.append(( __settings__.getLocalizedString( 40067 ), runnerAdd, ))
+            commands.append(( __settings__.getLocalizedString( 40068 ), runnerRemove, ))
 
     li.addContextMenuItems( commands )
     return xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=url, listitem=li, isFolder=isFolder)
@@ -197,12 +207,12 @@ def addLink(name,url,curX,rootID=None):
     runnerSearch = "XBMC.RunScript(" + modScripLoc + ", " + argsSimilar + ")"
 
     if(not curX.TvEpisode):
-        commands.append(( 'Netflix: Add to Instant Queue', runnerAdd, ))
-        commands.append(( 'Netflix: Remove From Instant Queue', runnerRemove, ))
-        #commands.append(( 'Netflix: Find Similar', runnerSearch, ))
+        commands.append(( __settings__.getLocalizedString( 40069 ), runnerAdd, ))
+        commands.append(( __settings__.getLocalizedString( 40070 ), runnerRemove, ))
+        #commands.append(( __settings__.getLocalizedString( 40065 ), runnerSearch, ))
     else:
-        commands.append(( 'Netflix: Add Entire Season to Instant Queue', runnerAdd, ))
-        commands.append(( 'Netflix: Remove Entire Season From Instant Queue', runnerRemove, ))
+        commands.append(( __settings__.getLocalizedString( 40071 ), runnerAdd, ))
+        commands.append(( __settings__.getLocalizedString( 40072 ), runnerRemove, ))
     liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=curX.Poster)
     liz.setInfo( type="Video", infoLabels={ "Mpaa": str(curX.Mpaa), "TrackNumber": int(str(curX.Position)), "Year": int(str(curX.Year)), "OriginalTitle": str(curX.Title), "Title": str(curX.TitleShort), "Rating": float(curX.Rating)*2, "Duration": str(int(curX.Runtime)/60), "Director": str(curX.Directors), "Genre": str(curX.Genres), "CastAndRole": str(curX.Cast), "Plot": str(curX.Synop) })
     liz.addContextMenuItems( commands )
@@ -236,13 +246,13 @@ def addLinkDisc(name,url,curX,rootID=None):
     runnerSearchD = "XBMC.RunScript(" + modScripLoc + ", " + argsSimilarD + ")"
 
     if(not curX.TvEpisode):
-        commands.append(( 'Netflix: Add to Disc Queue', runnerAddD, ))
-        commands.append(( 'Netflix: Remove From Disc Queue', runnerRemoveD, ))
-        commands.append(( 'Netflix: Add to Top of Disc Queue', runnerAddTopD, ))
+        commands.append(( __settings__.getLocalizedString( 40073 ), runnerAddD, ))
+        commands.append(( __settings__.getLocalizedString( 40074 ), runnerRemoveD, ))
+        commands.append(( __settings__.getLocalizedString( 40075 ), runnerAddTopD, ))
     else:
-        commands.append(( 'Netflix: Add Season to Disc Queue', runnerAddD, ))
-        commands.append(( 'Netflix: Remove Season From Disc Queue', runnerRemoveD, ))
-        commands.append(( 'Netflix: Add to Top of Disc Queue', runnerAddTopD, ))
+        commands.append(( __settings__.getLocalizedString( 40076 ), runnerAddD, ))
+        commands.append(( __settings__.getLocalizedString( 40077 ), runnerRemoveD, ))
+        commands.append(( __settings__.getLocalizedString( 40078 ), runnerAddTopD, ))
 
     liz.addContextMenuItems( commands )
     whichHandler = sys.argv[1]

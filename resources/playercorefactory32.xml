@@ -1,4 +1,4 @@
-<playercorefactory>
+﻿<playercorefactory>
   <players>
     <player name="IE" type="ExternalPlayer">
      <filename>c:\Program Files\Internet Explorer\iexplore.exe</filename>

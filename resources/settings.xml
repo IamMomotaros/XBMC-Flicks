@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
 <settings>
-<category label="General">
+<category label="40001">
     <setting id="pQuality" type="enum" lvalues="30001|30002|30003|30004" label="30000" default="30001" />
     <setting id="maxIqR" type="enum" lvalues="30006|30007|30008|30009|30010|30011|30012|30013|30014" label="30005" default="3" />
     <setting id="appendYear" type="enum" lvalues="30016|30017" label="30018" default="0" />
@@ -9,7 +9,7 @@
     <setting id="yearLimit" type="number" label="30221" default="1800" />
     <setting id="caUser" type="enum" lvalues="30016|30017" label="30032" default="1" />
 </category>
-<category label="Parental Control's">
+<category label="40002">
  <setting id="mrLimit" type="enum" lvalues="30201|30202|30203|30204|30205|30206|30207|30208|30209|30210|30211|30212|30213" label="30200" default="0"/>
  <setting id="showRatingInTitle" type="enum" lvalues="30016|30017" label="30220" default="0"/>
  <setting id="sgAction" type="enum" lvalues="30016|30017" label="30150" default="0"/>
@@ -33,11 +33,11 @@
  <setting id="sgTV" type="enum" lvalues="30016|30017" label="30168" default="0"/>
  <setting id="sgThrillers" type="enum" lvalues="30016|30017" label="30169" default="0"/>
 </category>
-<category label="Miscellaneous">
+<category label="40003">
     <setting id="useAltPlayer" type="enum" lvalues="30017" label="30029" default="1"/>
     <setting id="isOSX" type="enum" lvalues="30016|30017" label="30031" default="1" />
 </category>
-<category label="Debugging">
+<category label="40004">
     <setting id="debug" type="enum" lvalues="30016|30017" label="30091" default="1" />
     <setting id="separator" type="lsep" label="30094"/>
     <setting id="separator" type="lsep" label="30095"/>

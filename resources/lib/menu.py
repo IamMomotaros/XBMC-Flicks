@@ -1,7 +1,13 @@
-import sys
+﻿import sys
 import xbmc, xbmcgui, xbmcplugin, xbmcaddon
 import urllib
 from iqueue import *
+
+global addonPath
+global resourcePath
+__settings__ = xbmcaddon.Addon(id='plugin.video.xbmcflicks')
+addonPath = __settings__.getAddonInfo('path')
+resourcePath = os.path.join(addonPath, 'resources')
 
 # plugin modes
 MODE0iw = 0
@@ -93,97 +99,97 @@ MODEO1 = 10001
 PARAMETER_KEY_MODE = "mode"
 
 # menu item names
-SUBMENU0iw = "Instant Movies and Shows"
-SUBMENU0d = "Disc by Mail"
+SUBMENU0iw = __settings__.getLocalizedString( 40005 )
+SUBMENU0d = __settings__.getLocalizedString( 40006 )
 
-SUBMENU1 = "Instant Queue: All"
-SUBMENU1a = "Instant Queue: Movies"
-SUBMENU1b = "Instant Queue: TV"
-SUBMENU2 = "Recommended"
-SUBMENU3 = "All New Arrivals"
-SUBMENU3a = "All New Arrivals: Movies"
-SUBMENU3b = "All New Arrivals: TV"
-SUBMENU4 = "Search..."
-SUBMENU4ex = "Experimental Search..."
-SUBMENU5 = "Top 25 New Arrivals"
-SUBMENU5a = "Top 25 New Arrivals: Movies"
-SUBMENU5b = "Top 25 New Arrivals: TV"
-SUBMENU6 = "By Genre"
-SUBMENU6a = "Action & Adventure"
-SUBMENU6b = "Children & Family"
-SUBMENU6c = "Classics"
-SUBMENU6d = "Comedy"
-SUBMENU6e = "Documentary"
-SUBMENU6f = "Drama"
-SUBMENU6g = "Foreign"
-SUBMENU6h = "Horror"
-SUBMENU6i = "Romance"
-SUBMENU6j = "Sci-Fi & Fantasy"
-SUBMENU6k = "Television"
-SUBMENU6l = "Thrillers"
+SUBMENU1 = __settings__.getLocalizedString( 40007 )
+SUBMENU1a = __settings__.getLocalizedString( 40008 )
+SUBMENU1b = __settings__.getLocalizedString( 40009 )
+SUBMENU2 = __settings__.getLocalizedString( 40010 )
+SUBMENU3 = __settings__.getLocalizedString( 40011 )
+SUBMENU3a = __settings__.getLocalizedString( 40012 )
+SUBMENU3b = __settings__.getLocalizedString( 40013 )
+SUBMENU4 = __settings__.getLocalizedString( 40014 )
+SUBMENU4ex = __settings__.getLocalizedString( 40015 )
+SUBMENU5 = __settings__.getLocalizedString( 40016 )
+SUBMENU5a = __settings__.getLocalizedString( 40017 )
+SUBMENU5b = __settings__.getLocalizedString( 40018 )
+SUBMENU6 = __settings__.getLocalizedString( 40019 )
+SUBMENU6a = __settings__.getLocalizedString( 40022 )
+SUBMENU6b = __settings__.getLocalizedString( 40025 )
+SUBMENU6c = __settings__.getLocalizedString( 40026 )
+SUBMENU6d = __settings__.getLocalizedString( 40027 )
+SUBMENU6e = __settings__.getLocalizedString( 40028 )
+SUBMENU6f = __settings__.getLocalizedString( 40029 )
+SUBMENU6g = __settings__.getLocalizedString( 40031 )
+SUBMENU6h = __settings__.getLocalizedString( 40033 )
+SUBMENU6i = __settings__.getLocalizedString( 40036 )
+SUBMENU6j = __settings__.getLocalizedString( 40037 )
+SUBMENU6k = __settings__.getLocalizedString( 40040 )
+SUBMENU6l = __settings__.getLocalizedString( 40041 )
 ##Top 25 by Genre
-SUBMENU7 = "Top 10 By Genre"
-SUBMENU7a = "Action & Adventure"
-SUBMENU7b = "Anime & Animation"
-SUBMENU7c = "Blu-ray"
-SUBMENU7d = "Children & Family"
-SUBMENU7e = "Classics"
-SUBMENU7f = "Comedy"
-SUBMENU7g = "Documentary"
-SUBMENU7h = "Drama"
-SUBMENU7i = "Faith & Spirituality"
-SUBMENU7j = "Foreign"
-SUBMENU7k = "Gay & Lesbian"
-SUBMENU7l = "Horror"
-SUBMENU7m = "Independent"
-SUBMENU7n = "Music & Musicals"
-SUBMENU7o = "Romance"
-SUBMENU7p = "Sci-Fi & Fantasy"
-SUBMENU7q = "Special Interest"
-SUBMENU7r = "Sports & Fitness"
-SUBMENU7s = "Television"
-SUBMENU7t = "Thrillers"
+SUBMENU7 = __settings__.getLocalizedString( 40020 )
+SUBMENU7a = __settings__.getLocalizedString( 40022 )
+SUBMENU7b = __settings__.getLocalizedString( 40023 )
+SUBMENU7c = __settings__.getLocalizedString( 40024 )
+SUBMENU7d = __settings__.getLocalizedString( 40025 )
+SUBMENU7e = __settings__.getLocalizedString( 40026 )
+SUBMENU7f = __settings__.getLocalizedString( 40027 )
+SUBMENU7g = __settings__.getLocalizedString( 40028 )
+SUBMENU7h = __settings__.getLocalizedString( 40029 )
+SUBMENU7i = __settings__.getLocalizedString( 40030 )
+SUBMENU7j = __settings__.getLocalizedString( 40031 )
+SUBMENU7k = __settings__.getLocalizedString( 40032 )
+SUBMENU7l = __settings__.getLocalizedString( 40033 )
+SUBMENU7m = __settings__.getLocalizedString( 40034 )
+SUBMENU7n = __settings__.getLocalizedString( 40035 )
+SUBMENU7o = __settings__.getLocalizedString( 40036 )
+SUBMENU7p = __settings__.getLocalizedString( 40037 )
+SUBMENU7q = __settings__.getLocalizedString( 40038 )
+SUBMENU7r = __settings__.getLocalizedString( 40039 )
+SUBMENU7s = __settings__.getLocalizedString( 40040 )
+SUBMENU7t = __settings__.getLocalizedString( 40041 )
 
 ##DVD Queue
-SUBMENUD1 = "Disc Queue: All"
-SUBMENUD1m = "Disc Queue: Movies"
-SUBMENUD1t = "Disc Queue: TV"
+SUBMENUD1 = __settings__.getLocalizedString( 40042 )
+SUBMENUD1m = __settings__.getLocalizedString( 40043 )
+SUBMENUD1t = __settings__.getLocalizedString( 40044 )
 
-SUBMENUD2 = "Search..."
-SUBMENUD3 = "At Home"
+SUBMENUD2 = __settings__.getLocalizedString( 40045 )
+SUBMENUD3 = __settings__.getLocalizedString( 40046 )
 
 ##Top 25 by Genre
-SUBMENUD7 = "Top 25's By Genre"
-SUBMENUD7a = "Action & Adventure"
-SUBMENUD7b = "Anime & Animation"
-SUBMENUD7c = "Blu-ray"
-SUBMENUD7d = "Children & Family"
-SUBMENUD7e = "Classics"
-SUBMENUD7f = "Comedy"
-SUBMENUD7g = "Documentary"
-SUBMENUD7h = "Drama"
-SUBMENUD7i = "Faith & Spirituality"
-SUBMENUD7j = "Foreign"
-SUBMENUD7k = "Gay & Lesbian"
-SUBMENUD7l = "Horror"
-SUBMENUD7m = "Independent"
-SUBMENUD7n = "Music & Musicals"
-SUBMENUD7o = "Romance"
-SUBMENUD7p = "Sci-Fi & Fantasy"
-SUBMENUD7q = "Special Interest"
-SUBMENUD7r = "Sports & Fitness"
-SUBMENUD7s = "Television"
-SUBMENUD7t = "Thrillers"
+SUBMENUD7 = __settings__.getLocalizedString( 40021 )
+SUBMENUD7a = __settings__.getLocalizedString( 40022 )
+SUBMENUD7b = __settings__.getLocalizedString( 40023 )
+SUBMENUD7c = __settings__.getLocalizedString( 40024 )
+SUBMENUD7d = __settings__.getLocalizedString( 40025 )
+SUBMENUD7e = __settings__.getLocalizedString( 40026 )
+SUBMENUD7f = __settings__.getLocalizedString( 40027 )
+SUBMENUD7g = __settings__.getLocalizedString( 40028 )
+SUBMENUD7h = __settings__.getLocalizedString( 40029 )
+SUBMENUD7i = __settings__.getLocalizedString( 40030 )
+SUBMENUD7j = __settings__.getLocalizedString( 40031 )
+SUBMENUD7k = __settings__.getLocalizedString( 40032 )
+SUBMENUD7l = __settings__.getLocalizedString( 40033 )
+SUBMENUD7m = __settings__.getLocalizedString( 40034 )
+SUBMENUD7n = __settings__.getLocalizedString( 40035 )
+SUBMENUD7o = __settings__.getLocalizedString( 40036 )
+SUBMENUD7p = __settings__.getLocalizedString( 40037 )
+SUBMENUD7q = __settings__.getLocalizedString( 40038 )
+SUBMENUD7r = __settings__.getLocalizedString( 40039 )
+SUBMENUD7s = __settings__.getLocalizedString( 40040 )
+SUBMENUD7t = __settings__.getLocalizedString( 40041 )
 
 ## Rental History
-SUBMENUR = "Rental History"
-SUBMENUR1 = "Shipped"
-SUBMENUR2 = "Returned"
-SUBMENUR3 = "Watched"
+SUBMENUR = __settings__.getLocalizedString( 40047 )
+SUBMENUR1 = __settings__.getLocalizedString( 40048 )
+SUBMENUR2 = __settings__.getLocalizedString( 40049 )
+SUBMENUR3 = __settings__.getLocalizedString( 40050 )
 
 
 ## Genre Browse
-SUBMENUO1 = "Browse by Genre"
+SUBMENUO1 = __settings__.getLocalizedString( 40051 )
 # plugin handle
 handle = int(sys.argv[1])
 
@@ -407,11 +413,6 @@ def show_SUBMENUD7():
 print "##########################################################"
 print("Arg1: %s" % sys.argv[1])
 print("Arg2: %s" % sys.argv[2])
-global addonPath
-global resourcePath
-__settings__ = xbmcaddon.Addon(id='plugin.video.xbmcflicks')
-addonPath = __settings__.getAddonInfo('path')
-resourcePath = os.path.join(addonPath, 'resources')
 
 params = parameters_string_to_dict(sys.argv[2])
 submode = ""

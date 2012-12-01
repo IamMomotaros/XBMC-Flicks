@@ -1,4 +1,4 @@
-import xbmcplugin
+﻿import xbmcplugin
 
 def getUserSettingAltPlayer(arg):
     uap = xbmcplugin.getSetting(arg,'useAltPlayer')

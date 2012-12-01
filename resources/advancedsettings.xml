@@ -1,5 +1,6 @@
-<advancedsettings>
-  <videoextensions>
-    <add>.html</add>
-  </videoextensions>
+﻿<advancedsettings>
+	<useddsfanart>true</useddsfanart>
+	<videoextensions>
+		<add>.html</add>
+	</videoextensions>
 </advancedsettings>
